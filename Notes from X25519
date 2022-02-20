@@ -1,0 +1,13 @@
+So,
+
+we have a Zp = [0..p], where p = 2^255 - 19
+We all agree on a g. I pick a j
+
+I calculate g^j and post it publicly. 
+Alice wants to *send* a message. She finds my g^j and chooses another k.
+Alice computes g^j^k sets it as her key.
+Alice sends g^k to me.
+I receive alice's g^k, and combine it with my g^j to get: g^k^j
+
+g^j^k = g^k^j, therefore we both have derived a secret
+by only agreeing on 'g', publishing 'g^j' and sending 'g^k'
