@@ -1,6 +1,6 @@
-use tweet_nacl_rust::{U8_32, generate_keypair, random_bytes, x25519, scalarmult_base};
+use tweet_nacl_rust::{generate_keypair, random_bytes, x25519, scalarmult_base};
 
-fn pack_u8_32_into_string(num: U8_32) -> String {
+fn pack_u8_32_into_string(num: [u8; 32]) -> String {
     let mut out = "".to_string();
     for i in (0..32).rev() {
         //go in big endian order

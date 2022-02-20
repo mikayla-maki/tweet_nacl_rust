@@ -3,7 +3,7 @@ use rand::Rng;
 //listing 1
 //This cryptography use 255 bit numbers, too large to fit in standard types integer types.
 //therefore, We use 32 element byte arrays as input and output of our code.
-pub type U8_32 = [u8; 32]; //Little endian array order
+type U8_32 = [u8; 32]; //Little endian array order
                        //Internally, it's easier to use an array of 16 elements, with 2 bytes in each elements.
                        //We use i64 so that math simply overflows without loss due to wrapping and we can manage
                        //carrying the bits forward ourselves
