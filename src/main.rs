@@ -298,6 +298,7 @@ fn main() {
     println!("Bob's   shared secret: {:?}", pack_u8_32_into_string(shared_secret_b));
 }
 
+//Because I like seeing passing tests 🥰
 #[test]
 fn test_shared_secret_gen() {
     //Bob, publishes 'bob_pk'
