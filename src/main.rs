@@ -1,4 +1,4 @@
-use tweet_nacl_rust::{generate_keypair, random_bytes, x25519, scalarmult_base};
+use tweet_nacl_rust::x25519::{generate_keypair, random_bytes, scalarmult_base, x25519};
 
 fn pack_u8_32_into_string(num: [u8; 32]) -> String {
     let mut out = "".to_string();

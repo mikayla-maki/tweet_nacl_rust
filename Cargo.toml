@@ -1,5 +1,5 @@
 [package]
-name = "tweet_nacl_rust"
+name = "tweet_nacl_x25519"
 version = "0.1.0"
 edition = "2021"
 

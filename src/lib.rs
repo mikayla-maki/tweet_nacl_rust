@@ -1,5 +1,3 @@
-use rand::Rng;
-
 //listing 1
 //This cryptography use 255 bit numbers, too large to fit in standard types integer types.
 //therefore, We use 32 element byte arrays as input and output of our code.
@@ -179,15 +177,8 @@ pub fn x25519(pk: U8_32, sk: U8_32) -> U8_32 {
 
 //Helper function written by me to generate random bytes for k and the secret key.
 pub fn random_bytes() -> U8_32 {
-    let mut out = [0; 32];
-
-    let mut r = rand::thread_rng();
-
-    for i in 0..32 {
-        out[i] = r.gen(); //Should be cryptographically secure, see: https://rust-random.github.io/rand/rand/rngs/struct.StdRng.html
-    }
-
-    out
+    //Used to have some loop code,,, turns out that was already written for me!
+    rand::random()
 }
 
 //Listing 4
@@ -265,4 +256,3 @@ fn scalarmult(scalar: U8_32, point: U8_32) -> U8_32 {
     //Pack it up, send it off!
     pack25519(a)
 }
-
